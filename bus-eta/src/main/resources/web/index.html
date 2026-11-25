@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BusNow.lk</title>
+    <link rel="icon" href="BusNow_lk_bus_icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Bus ETA home">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="4" y="7" width="32" height="24" rx="6" fill="#2563eb"/>
+        <rect x="8" y="11" width="24" height="9" rx="2" fill="#cfe3ff"/>
+        <circle cx="12" cy="31" r="4" fill="#0e1114"/><circle cx="28" cy="31" r="4" fill="#0e1114"/>
+        <rect x="14" y="23" width="12" height="3" rx="1.5" fill="#fbbf24"/>
+      </svg>
+      <span>BusNow</span>.lk
+    </a>
+
+    <nav class="menu" aria-label="Main">
+      <a href="#find">Find my bus</a>
+      <a href="#routes">Routes</a>
+      <a href="#how">How it works</a>
+      <button id="theme" class="theme-btn" type="button" aria-label="Switch to dark mode">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+  <section class="hero" id="find">
+
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#091924"/>
+            <stop offset="0.5" stop-color="#1b4a4c"/>
+            <stop offset="1" stop-color="#e9b873"/>
+          </linearGradient>
+          <radialGradient id="sun" cx="0.72" cy="0.58" r="0.42">
+            <stop offset="0" stop-color="#ffe2ad" stop-opacity="0.95"/>
+            <stop offset="1" stop-color="#ffe2ad" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff2b8" stop-opacity="0.7"/>
+            <stop offset="1" stop-color="#fff2b8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <rect width="1440" height="640" fill="url(#sky)"/>
+        <rect width="1440" height="640" fill="url(#sun)"/>
+
+
+        <path d="M0 360 C110 296 220 330 330 290 C450 246 520 300 640 312 C760 324 820 250 930 240 C1050 230 1130 300 1240 290 C1330 282 1390 252 1440 270 L1440 640 L0 640Z" fill="#2c5d55" opacity="0.9"/>
+        <path d="M0 440 C150 388 260 428 400 402 C540 376 640 436 780 426 C920 416 1010 356 1150 370 C1270 382 1360 424 1440 404 L1440 640 L0 640Z" fill="#1e4b40"/>
+        <path d="M0 506 C140 466 260 506 420 490 C580 474 700 526 860 516 C1020 506 1150 456 1290 470 C1360 477 1410 495 1440 490 L1440 640 L0 640Z" fill="#143a31"/>
+
+
+        <rect y="582" width="1440" height="58" fill="#171b20"/>
+        <rect y="582" width="1440" height="3" fill="#2b323a"/>
+        <line x1="0" y1="613" x2="1440" y2="613" stroke="#e9e2c5" stroke-width="3" stroke-dasharray="28 24" opacity="0.7"/>
+
+
+        <g class="bus">
+          <path d="M232 552 L430 510 L430 600 L232 574Z" fill="url(#beam)"/>
+          <ellipse cx="116" cy="612" rx="124" ry="6" fill="#000" opacity="0.35"/>
+          <rect x="0" y="508" width="232" height="86" rx="16" fill="#1f6fb0"/>
+          <rect x="0" y="568" width="232" height="14" fill="#174f80"/>
+          <rect x="10" y="520" width="172" height="34" rx="6" fill="#cfe9ff"/>
+          <path d="M190 520 h24 a10 10 0 0 1 10 10 v24 h-34z" fill="#cfe9ff"/>
+          <rect x="58" y="520" width="4" height="34" fill="#1f6fb0"/>
+          <rect x="108" y="520" width="4" height="34" fill="#1f6fb0"/>
+          <rect x="158" y="520" width="4" height="34" fill="#1f6fb0"/>
+          <rect x="188" y="560" width="30" height="8" rx="2" fill="#ffb84d"/>
+          <circle cx="224" cy="574" r="5" fill="#fff6c9"/>
+          <circle cx="52" cy="594" r="18" fill="#0e1114"/><circle cx="52" cy="594" r="7" fill="#8a96a3"/>
+          <circle cx="178" cy="594" r="18" fill="#0e1114"/><circle cx="178" cy="594" r="7" fill="#8a96a3"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <h1>Know when your bus arrives</h1>
+      <p class="lead">Search for the stop where you are waiting and see every bus on its way, with the minutes to go.</p>
+
+      <form class="search" id="search" role="search">
+        <div class="field combo">
+          <label class="visually-hidden" for="stop">My stop</label>
+          <input id="stop" type="text" placeholder="Type your stop, e.g. Kurunegala" autocomplete="off"
+                 role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="stopList">
+          <ul id="stopList" class="stop-list" role="listbox" hidden></ul>
+        </div>
+        <button class="btn" type="submit">Find my bus</button>
+      </form>
+
+      <p id="served" class="served"></p>
+    </div>
+  </section>
+
+
+  <section class="results" id="results">
+    <div class="wrap">
+      <div class="results-head">
+        <h2 id="resultsTitle">Buses coming to your stop</h2>
+        <p class="status"><span id="liveDot" class="live-dot" hidden></span><span id="status"></span></p>
+      </div>
+      <ol id="buses" class="buses" aria-live="polite"></ol>
+    </div>
+  </section>
+
+
+  <section class="routes" id="routes">
+    <div class="wrap">
+      <h2>Routes we cover</h2>
+      <p class="sub">Every route has a new bus leaving each minute.</p>
+      <ul id="routeList" class="route-list"></ul>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Three steps</p>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Search for your stop</h3><p>Type any part of its name, like "kuru" or "bus", and pick it from the list.</p></li>
+        <li><span class="n">2</span><h3>See the buses on their way</h3><p>Only buses that are still coming to your stop are shown, nearest first.</p></li>
+        <li><span class="n">3</span><h3>Watch the minutes drop</h3><p>The page refreshes by itself every few seconds, so there is nothing to press.</p></li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Demo project: the project created by group 06 members
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

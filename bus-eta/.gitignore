@@ -1,0 +1,18 @@
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Maven
+target/
+
+# Compiled classes and logs
+*.class
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.env
