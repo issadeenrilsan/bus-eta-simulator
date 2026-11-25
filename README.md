@@ -12,10 +12,11 @@ Built with **Java + MySQL (JDBC) + Maven**, no frameworks: the web server, the A
 
 - **Stop search:** type part of a stop name (e.g. `kuru`, `mundel`) and pick from the list
 - **Live arrivals:** a card for every bus still coming to your stop, showing route, destination and minutes until arrival, refreshed every 3 seconds
-- **3 real routes, 18 buses:**
+- **4 real routes :
   - Kalpitiya → Puttalam
   - Chilaw → Puttalam
   - Colombo → Anuradhapura (via Kurunegala and Dambulla)
+  -  Baticola → Trincomalee
 - **Shared stops:** Puttalam Bus Stand is served by two routes, so buses from both appear
 - **Realistic departures:** buses on each route leave one minute apart
 - **Light / dark theme** and a layout that works on small screens
